@@ -5,6 +5,13 @@ public class MotorBike {
 	//State
 	private int speed;
 	
+	MotorBike(){
+		this(20);
+	}
+	
+	MotorBike(int speed) {
+		this.speed = speed;
+	}
 	
 	//behaviour
 	void start () {
@@ -12,12 +19,19 @@ public class MotorBike {
 	}
 	
 	public void setSpeed(int speed) {
-		if(speed > 0 ) {
+		if(speed >= 0 ) {
 			this.speed += speed;
 		}
 	}
 	
 	public int getSpeed() {
 		return this.speed;
+	}
+	
+	public int decreaseSpeed(int speed) {
+		if (speed <= this.speed && speed >=0) { 
+			this.speed -= speed;
+		}
+		return getSpeed();
 	}
 }

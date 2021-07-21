@@ -10,6 +10,7 @@ public class MotorBikeRunner {
 		dukati.start();
 		honda.setSpeed(10);
 		System.out.println("Speed : " + honda.getSpeed());
+		System.out.println(honda.decreaseSpeed(-20));
 		
 	}
 }
